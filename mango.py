@@ -61,7 +61,6 @@ for a in range(0,picnum):
 for i in random.sample(items,picnum):
     img = cv2.imread(train_img_dir + labels_pic[i] + ".jpg")
     res = cv2.resize(img,(224,224),interpolation=cv2.INTER_LINEAR)
-    res = cv2.cvtColor(res,cv2.COLOR_BGR2RGB)
     # flip image
     img_flip0=cv2.flip(res,0)
     img_flip1=cv2.flip(res,1)
